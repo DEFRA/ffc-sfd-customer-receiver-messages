@@ -1,0 +1,19 @@
+services:
+  ffc-sfd-customer-receiver-messages:
+    build:
+      context: .
+      target: production
+    image: ffc-sfd-customer-receiver-messages
+    container_name: ffc-sfd-customer-receiver-messages
+    depends_on:
+      - ffc-sfd-customer-receiver-messages-postgres
+    environment:
+      APPINSIGHTS_CLOUDROLE: ffc-sfd-customer-receiver-messages-local
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+
+  ffc-sfd-customer-receiver-messages-postgres:
+    image: postgres:11.4-alpine
+    environment:
+      POSTGRES_DB: ffc-sfd-customer-receiver-messages
+      POSTGRES_PASSWORD: ppp
+      POSTGRES_USERNAME: postgres

@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "ffc-sfd-customer-receiver-messages.deployment") -}}
+{{- define "ffc-sfd-customer-receiver-messages.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "ffc-sfd-customer-receiver-messages.container") }}
+{{- end -}}
