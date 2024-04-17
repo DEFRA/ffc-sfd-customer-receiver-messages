@@ -9,8 +9,8 @@ services:
     image: ffc-sfd-customer-receiver-messages-development
     container_name: ffc-sfd-customer-receiver-messages-development
     ports:
-      - "3000:3000"
-      - "9229:9229"
+      - "3012:3012"
+      - "9012:9229"
     volumes:
       - ./app:/home/node/app
       - ./test:/home/node/test
