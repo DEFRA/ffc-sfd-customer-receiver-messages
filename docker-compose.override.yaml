@@ -19,7 +19,7 @@ services:
   
   ffc-sfd-customer-receiver-messages-postgres:
     ports:
-      - "5432:5432"
+      - "5012:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
