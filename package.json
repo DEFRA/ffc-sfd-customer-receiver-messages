@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfd-customer-receiver-messages",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "",
   "homepage": "github.com?owner=defra&repo=ffc-sfd-customer-receiver-messages&organization=defra",
   "main": "app/index.js",
@@ -22,7 +22,8 @@
     "@hapi/hapi": "21.3.2",
     "applicationinsights": "2.8.0",
     "hapi-pino": "^12.1.0",
-    "joi": "^17.12.3"
+    "joi": "^17.12.3",
+    "log-timestamp": "^0.3.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.11",
