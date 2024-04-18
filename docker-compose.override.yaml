@@ -10,7 +10,7 @@ services:
     container_name: ffc-sfd-customer-receiver-messages-development
     ports:
       - "3012:3012"
-      - "9012:9229"
+      - "9012:9012"
     volumes:
       - ./app:/home/node/app
       - ./test:/home/node/test
