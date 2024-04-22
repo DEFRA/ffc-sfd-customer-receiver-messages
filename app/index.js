@@ -1,11 +1,8 @@
 require('./insights').setup()
 require('log-timestamp')
-const { createServer } = require('./server')
 
 const init = async () => {
-  const server = await createServer()
-  await server.start()
-  console.log('Server running on %s', server.info.uri)
+  console.log('Running app')
 }
 
 process.on('unhandledRejection', (err) => {
