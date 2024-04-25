@@ -1,4 +1,4 @@
-const { messageConfig } = require('./message')
+const messageConfig = require('./message')
 
 module.exports = {
   messageConfig

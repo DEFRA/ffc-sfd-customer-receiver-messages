@@ -5,8 +5,11 @@ services:
       target: production
     image: ffc-sfd-customer-receiver-messages
     container_name: ffc-sfd-customer-receiver-messages
-    depends_on:
-      - ffc-sfd-customer-receiver-messages-postgres
     environment:
       APPINSIGHTS_CLOUDROLE: ffc-sfd-customer-receiver-messages-local
       APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+      MESSAGE_HOST: ${MESSAGE_HOST}
+      MESSAGE_USER: ${MESSAGE_USER}
+      MESSAGE_PASSWORD: ${MESSAGE_PASSWORD}
+      MESSAGES_SUBSCRIPTION_ADDRESS: ${MESSAGES_SUBSCRIPTION_ADDRESS}-${DEV_SUFFIX}
+      MESSAGES_TOPIC_ADDRESS: ${MESSAGES_TOPIC_ADDRESS}-${DEV_SUFFIX}

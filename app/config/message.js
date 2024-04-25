@@ -9,7 +9,7 @@ const schema = Joi.object({
     useCredentialChain: Joi.bool().default(false),
     appInsights: Joi.object()
   },
-  processorSubscription: {
+  receiverSubscription: {
     address: Joi.string(),
     topic: Joi.string(),
     type: Joi.string().allow('subscription')
@@ -27,9 +27,9 @@ const config = {
         ? require('applicationinsights')
         : undefined
   },
-  processorSubscription: {
-    address: process.env.PROCESSOR_SUBSCRIPTION_ADDRESS,
-    topic: process.env.PROCESSOR_TOPIC_ADDRESS,
+  receiverSubscription: {
+    address: process.env.MESSAGES_SUBSCRIPTION_ADDRESS,
+    topic: process.env.MESSAGES_TOPIC_ADDRESS,
     type: 'subscription'
   }
 }
@@ -42,11 +42,9 @@ if (result.error) {
   throw new Error(`The messaging config is invalid. ${result.error.message}`)
 }
 
-const processorSubscription = {
+const receiverSubscription = {
   ...result.value.messageQueue,
-  ...result.value.processorSubscription
+  ...result.value.receiverSubscription
 }
 
-module.exports = {
-  processorSubscription
-}
+module.exports = { receiverSubscription }
