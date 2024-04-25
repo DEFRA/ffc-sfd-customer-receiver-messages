@@ -12,7 +12,6 @@ const handleMessage = async (message, receiver) => {
 }
 
 const startMessaging = async () => {
-  console.log(messageConfig)
   let messagesReceiver //eslint-disable-line
   const receiverAction = message => handleMessage(message, messagesReceiver)
   messagesReceiver = new MessageReceiver(
@@ -20,7 +19,7 @@ const startMessaging = async () => {
     receiverAction
   )
   await messagesReceiver.subscribe()
-  console.info('Receiver ready to receive processor messages')
+  console.info('Messages receiver is ready to receive messages')
 }
 
 module.exports = { startMessaging }
