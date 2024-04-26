@@ -1,8 +1,10 @@
-const server = require('./server')
+require('./insights').setup()
+require('log-timestamp')
+const { startMessaging } = require('./messaging')
 
 const init = async () => {
-  await server.start()
-  console.log('Server running on %s', server.info.uri)
+  await startMessaging()
+  console.log('Running app')
 }
 
 process.on('unhandledRejection', (err) => {
