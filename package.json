@@ -1,6 +1,6 @@
 {
   "name": "ffc-sfd-customer-receiver-messages",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "",
   "homepage": "github.com?owner=defra&repo=ffc-sfd-customer-receiver-messages&organization=defra",
   "main": "app/index.js",
@@ -15,7 +15,7 @@
   },
   "author": "Defra",
   "contributors": [
-    "Rana Salem rana.salem@defra.gov.uk"
+    "Rana Salem <rana.salem@defra.gov.uk>"
   ],
   "license": "OGL-UK-3.0",
   "dependencies": {
