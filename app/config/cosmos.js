@@ -10,7 +10,7 @@ const schema = Joi.object({
 const config = {
   endpoint: process.env.COSMOS_ENDPOINT,
   key: process.env.COSMOS_KEY,
-  messagesDatabase: process.env.COSMOS_MESSAGES_DSTABSE,
+  messagesDatabase: process.env.COSMOS_MESSAGES_DATABASE,
   messagesContainer: process.env.COSMOS_MESSAGES_CONTAINER
 }
 
