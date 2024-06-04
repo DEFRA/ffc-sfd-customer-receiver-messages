@@ -36,13 +36,13 @@ resources:
       name: DEFRA/adp-pipeline-common
       endpoint: DEFRA
       type: github
-      ref: refs/heads/main
+      ref: feature/test-resource-name
 
 extends:
   template: /pipelines/common-app-build.yaml@DEFRA-ADPPipelineCommon
   parameters:
     programmeName: "ffc"
-    projectName: "ffc-sfd-customer-receiver-messages"
+    teamName: "ffc-sfd"
     serviceName: "ffc-sfd-customer-receiver-messages"
     deployFromFeature: ${{ parameters.deployFromFeature }}
     deployConfigOnly: ${{ parameters.deployConfigOnly }}
