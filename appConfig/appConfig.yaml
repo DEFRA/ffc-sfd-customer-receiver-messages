@@ -4,7 +4,3 @@
   value: "3012"
 - key: APPINSIGHTS_CLOUDROLE
   value: "{{serviceName}}"
-- key: MESSAGES_TOPIC_ADDRESS
-  value: "fcp-sfd-customer-messages"
-- key: MESSAGES_SUBSCRIPTION_ADDRESS
-  value: "fcp-sfd-customer-receiver-messages"
