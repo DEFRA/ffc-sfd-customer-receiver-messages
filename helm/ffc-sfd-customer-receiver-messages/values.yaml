@@ -1,7 +1,7 @@
 # These are populated when your service is created via the ADP Portal scaffolder. Do not change these, as they are abstracted from your service and are mandatory. They are for your reference here.
 name: ffc-sfd-customer-receiver-messages
-namespace: fcp-sfd
-workstream: fcp-sfd
+namespace: ffc-sfd
+workstream: ffc-sfd
 image: ffc-sfd-customer-receiver-messages
 
 # You may add further labels to identify the service or what your component does.
@@ -15,3 +15,21 @@ deployment: {}
 container:
   memCpuTier: L
   port: 3012
+
+# These may be changed. See here: https://github.com/DEFRA/adp-helm-library?tab=readme-ov-file#container-template
+livenessProbe:
+  path: /healthz
+  port: 3012
+  initialDelaySeconds: 20
+  periodSeconds: 10
+  failureThreshold: 3
+  timeoutSeconds: 5
+
+# These may be changed. See here: https://github.com/DEFRA/adp-helm-library?tab=readme-ov-file#container-template
+readinessProbe:
+  path: /healthy
+  port: 3012
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  failureThreshold: 3
+  timeoutSeconds: 5
