@@ -2,7 +2,7 @@
   value: "{{servicename}}-APPINSIGHTS-CONNECTIONSTRING"
   type: "keyvault"
 - key: MESSAGE_HOST
-  value: "SNDADPINFSB3401.servicebus.windows.net"
+  value: "SNDADPINFSB4401.servicebus.windows.net"
 - key: MESSAGES_TOPIC_ADDRESS
   value: "fcp-sfd-customer-messages"
 - key: MESSAGES_SUBSCRIPTION_ADDRESS
