@@ -7,6 +7,7 @@ const schema = Joi.object({
     username: Joi.string(),
     password: Joi.string(),
     useCredentialChain: Joi.bool().default(false),
+    managedIdentityClientId: Joi.string().optional(),
     appInsights: Joi.object()
   },
   receiverSubscription: {
