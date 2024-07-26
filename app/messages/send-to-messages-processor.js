@@ -11,7 +11,6 @@ const sendToMessagesProcessor = async (message) => {
     })
     console.log('Message sent to messages processor:', message.body)
   } catch (error) {
-    console.error('Error sending message to messages processor:', error)
     throw new Error(`Error sending message to messages processor: ${error.message}`)
   }
 }
