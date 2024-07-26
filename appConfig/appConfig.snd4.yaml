@@ -9,3 +9,7 @@
   value: "fcp-sfd-customer-receiver-messages"
 - key: COSMOS_ENDPOINT
   value: "https://fcp-sfd-temp-cosmos.documents.azure.com:443/"
+- key: PROCESSOR_TOPIC_ADDRESS
+  value: "fcp-sfd-messages"
+- key: PROCESSOR_SUBSCRIPTION_ADDRESS
+  value: "fcp-sfd-messages-processor"
