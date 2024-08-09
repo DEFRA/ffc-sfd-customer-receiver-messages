@@ -6,7 +6,7 @@ const sendToMessagesProcessor = async (message) => {
   try {
     await sender.sendMessage({
       body: message.body,
-      type: 'send-to-messages-processor',
+      type: message.applicationProperties.type,
       source: 'ffc-sfd-customer-receiver-messages'
     })
     console.log('Message sent to messages processor:', message.body)
